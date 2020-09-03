@@ -10,11 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: pip3 install --upgrade setuptools
-  displayName: Install setuptools package
-
-- script: pip3 install -U -r requirements.txt
-  displayName: Install python requirements
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6'
 
 - script: |
     sudo apt-add-repository ppa:qameta/allure
@@ -22,8 +20,11 @@ steps:
     sudo apt-get install allure
   displayName: Install allure
 
-- script: pytest --alluredir=tmp/my_allure_results
-  displayName: Run pytest
+- script: |
+  pip install --upgrade setuptools
+  pip install -r requirements.txt
+  pytest --alluredir=tmp/my_allure_results
+  displayName: Install python requirements and run tests
 
 - script: allure serve tmp/my_allure_results
   displayName: Get test results in HTML 
