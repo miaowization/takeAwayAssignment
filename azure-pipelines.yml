@@ -20,8 +20,11 @@ steps:
   displayName: Install Google Chrome
 
 - script: |
-    wget -O allure2-2.13.5.zip https://github.com/allure-framework/allure2/archive/2.13.5.zip
-    unzip allure2-2.13.5.zip
+    curl -o allure-2.7.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.7.0/allure-2.7.0.tgz
+    sudo tar -zxvf allure-2.7.0.tgz -C /opt/
+    sudo ln -s /opt/allure-2.7.0/bin/allure /usr/bin/allure
+    rm -rf allure-2.7.0.tgz
+    allure --version
   displayName: Install Allure
 
 - script: |
@@ -42,7 +45,7 @@ steps:
     pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
-- script: allure2-2.13.5/allure-commandline/src/main/java/io/qameta/allure generate tmp/my_allure_results
+- script: allure serve tmp/my_allure_results
   displayName: Generate test report
 
 - publish: $(System.DefaultWorkingDirectory)/allure-report

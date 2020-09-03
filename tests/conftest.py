@@ -33,7 +33,7 @@ def driver(request):
         options.add_argument("--start-maximized")
         options.headless = headless
         return webdriver.Firefox(executable_path=GeckoDriverManager().install(),
-                                options=options)
+                                 options=options)
 
     driver_ = None
     if browser == 'Chrome':
