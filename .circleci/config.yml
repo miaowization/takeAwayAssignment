@@ -28,6 +28,9 @@ jobs:
             sudo apt-get update
             sudo apt-get install firefox
             sudo apt install firefox-geckodriver
+            which geckodriver
+            sudo chmod +x geckodriver
+            sudo mv geckodriver /usr/local/bin/
       - run:
           name: Install Allure
           command: |
