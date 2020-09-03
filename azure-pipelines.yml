@@ -20,8 +20,8 @@ steps:
   displayName: Install Google Chrome
 
 - script: |
-    wget -O allure.zip https://github.com/allure-framework/allure2/archive/2.13.5.zip
-    unzip allure.zip
+    wget -O allure2-2.13.5.zip https://github.com/allure-framework/allure2/archive/2.13.5.zip
+    unzip allure2-2.13.5.zip
   displayName: Install Allure
 
 - script: |
@@ -42,7 +42,7 @@ steps:
     pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
-- script: allure/bin/allure generate tmp/my_allure_results
+- script: allure2-2.13.5/bin/allure generate tmp/my_allure_results
   displayName: Generate test report
 
 - publish: $(System.DefaultWorkingDirectory)/allure-report
