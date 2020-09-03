@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: pip install -U -r requirements.txt
+  displayName: Install python requirements
+
+- script: sudo apt-add-repository ppa:qameta/allure
+          sudo apt-get update 
+          sudo apt-get install allure
+  displayName: Install allure
+
+- script: pytest --alluredir=tmp/my_allure_results
+  displayName: Run pytest
+
+- script: allure serve tmp/my_allure_results
+  displayName: Get test results in HTML 
+  
