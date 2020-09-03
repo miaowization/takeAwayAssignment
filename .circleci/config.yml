@@ -10,12 +10,6 @@ jobs:
           command: |
             wget -O google-chrome-latest.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             dpkg -i google-chrome-latest.deb
-            wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip
-            mv chromedriver /usr/bin/chromedriver
-            chown root:root /usr/bin/chromedriver
-            chmod +x /usr/bin/chromedriver
-            which chromedriver
 
       - run:
           name: Install Firefox and geckodriver
@@ -23,14 +17,7 @@ jobs:
             apt-add-repository ppa:qameta/allure
             apt-get update
             apt-get install firefox
-            which firefox
-            chmod +x /usr/bin/firefox
-            mv /usr/bin/firefox /usr/local/bin/
-            wget https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz
-            tar -xvzf geckodriver*
-            chmod +x geckodriver
-            mv geckodriver /usr/local/bin/
-            which geckodriver
+
       - run:
           name: Install Allure
           command: |
