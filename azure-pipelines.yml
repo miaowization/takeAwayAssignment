@@ -15,6 +15,10 @@ steps:
     versionSpec: '3.6'
 
 - script: |
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+- script: |
     sudo apt-add-repository ppa:qameta/allure
     sudo apt-get update
     sudo apt-get install allure
@@ -32,6 +36,6 @@ steps:
     pytest tests --doctest-modules --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
-- script: allure serve tmp/my_allure_results
-  displayName: Get test results in HTML 
+- script: allure generate tmp/my_allure_results
+  displayName: Generate test report
   

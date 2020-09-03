@@ -26,10 +26,7 @@ def test_case1(driver):
         restr_page.wait_until_text_in_element((By.XPATH, "//*[@class='topbar__title-container']/button"),'8888-alpha')
         assert restr_page.top_bar_post_code.text == '8888-alpha'
         restr_page.search_restaurants_field.set_text('Shabu Shabu Test')
-        driver.implicitly_wait(2)
-        if restr_page.closed_for_delivery.is_displayed():
-            restr_page.reset_search_restaurant_filter.click()
-            restr_page.wait_until_invisible(restr_page.closed_for_delivery)
+        restr_page.wait_until_present(restr_page.first_restaurant)
         restr_page.first_restaurant.click()
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
