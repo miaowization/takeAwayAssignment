@@ -22,6 +22,7 @@ jobs:
             sudo apt-add-repository ppa:qameta/allure
             sudo apt-get update
             sudo apt-get install firefox
+            sudo apt install firefox-geckodriver
       - run:
           name: Install Allure
           command: |
@@ -41,7 +42,7 @@ jobs:
           name: Setup webdrivers
           command: |
             pip install webdrivermanager
-            webdrivermanager firefox chrome --linkpath /usr/local/bin
+            webdrivermanager chrome --linkpath /usr/local/bin
       - run:
           name: Run tests
           command: |
