@@ -15,12 +15,16 @@ def test_case1(driver):
     with allure.step('Open homepage and setup address'):
         driver.get('https://www.thuisbezorgd.nl/en/')
         home_page = HomePage(driver)
+        home_page.address_field.click()
         home_page.address_field.clear_text()
-        home_page.address_field.set_text('8888')
-        home_page.wait_until_element_present((By.XPATH, "//*[text()='Suggestions']/../a[contains(text(),'8888')]"))
-        driver.find_element_by_xpath("//*[text()='Suggestions']/../a[contains(text(),'8888')]").click()
-        home_page.wait_until_element_present((By.XPATH, "//*[@id='reference']/span[contains(text(), '8888 Alpha')]"))
-        driver.find_element_by_xpath("//*[@id='reference']/span[contains(text(), '8888 Alpha')]").click()
+        home_page.address_field.send_keys('8888')
+        home_page.wait_until_present(home_page.post_code)
+        home_page.post_code.click()
+        home_page.wait_until_present(home_page.post_code_alpha)
+        home_page.post_code_alpha.click()
+        home_page.wait_until_url(
+            "https://www.thuisbezorgd.nl/en/order-takeaway-8888-alpha?search")
+
     with allure.step('Choose a restaurant'):
         restr_page = RestaurantsPage(driver)
         restr_page.wait_until_text_in_element((By.XPATH, "//*[@class='topbar__title-container']/button"),'8888-alpha')
@@ -34,6 +38,7 @@ def test_case1(driver):
         menu_page.order_button.click()
     with allure.step('Make a chekout'):
         checkout_page = CheckoutPage(driver)
+        checkout_page.wait_until_present(checkout_page.address)
         checkout_page.address.set_text('main street 2415')
         checkout_page.post_code.clear_text()
         checkout_page.post_code.set_text('8888AA')

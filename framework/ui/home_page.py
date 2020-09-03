@@ -10,5 +10,7 @@ class HomePage(BasePage):
         super().__init__(driver)
 
     locators = {
-        "address_field": ('ID', 'imysearchstring'),
+        "address_field": ('XPATH', '//input[@id="imysearchstring"]'),
+        "post_code": ('XPATH', '//a[@data-name="8888"]'),
+        "post_code_alpha": ('XPATH', '//a[contains(@data-href,"8888-alpha")]')
         }

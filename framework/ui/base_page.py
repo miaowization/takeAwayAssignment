@@ -25,3 +25,9 @@ class BasePage(PageFactory):
     def wait_until_invisible(self, element):
         self.wait.until(EC.invisibility_of_element_located((element._locator[0],
                                                        element._locator[1])))
+    def wait_until_url(self, url):
+        self.wait.until(EC.url_to_be(url))
+
+    def wait_until_clickable(self, element):
+        self.wait.until(
+            EC.element_to_be_clickable((element._locator[0], element._locator[1])))

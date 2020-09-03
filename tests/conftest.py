@@ -3,30 +3,40 @@ import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions
+from selenium.webdriver.firefox.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
+def pytest_addoption(parser):
+    parser.addoption("--browser", action="store", default="Firefox")
+    parser.addoption("--headless", action="store", default="True")
 
 @pytest.fixture
 def driver(request):
-    options = ChromeOptions()
-    remote = True
+    headless = bool(request.config.getoption('--headless'))
+    browser = request.config.getoption('--browser')
 
-    def create_remote_driver():
-        options.add_argument('--no-sandbox')
-        options.add_argument('-remote-debugging-port=9222')
-        options.headless = True
-        command_executor = 'http://localhost:4444/wd/hub'
-        return webdriver.Remote(command_executor, desired_capabilities=options.to_capabilities())
+    def create_chrome_driver():
+        options = ChromeOptions()
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--start-maximized")
+        options.headless = headless
+        return webdriver.Chrome(executable_path=ChromeDriverManager.install(),
+                                options=options)
 
-    def create_local_driver():
-        return webdriver.Chrome(
-            executable_path=ChromeDriverManager().install(), options=options)
+    def create_firefox_driver():
+        options = Options()
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--start-maximized")
+        options.headless = headless
+        return webdriver.Firefox(executable_path=GeckoDriverManager().install(),
+                                options=options)
 
     driver_ = None
-    if remote:
-        driver_ = create_remote_driver()
-    else:
-        driver_ = create_local_driver()
+    if browser == 'Chrome':
+        driver_ = create_chrome_driver()
+    elif browser == 'Firefox':
+        driver_ = create_firefox_driver()
     driver_.set_script_timeout(10)
     driver_.set_page_load_timeout(30)
 
