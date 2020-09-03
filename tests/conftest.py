@@ -24,7 +24,7 @@ def driver(request):
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--start-maximized")
         options.headless = headless
-        return webdriver.Chrome(executable_path=ChromeDriverManager.install(),
+        return webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',
                                 options=options)
 
     def create_firefox_driver():
@@ -32,7 +32,7 @@ def driver(request):
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--start-maximized")
         options.headless = headless
-        return webdriver.Firefox(executable_path=GeckoDriverManager().install(),
+        return webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                 options=options)
 
     driver_ = None
