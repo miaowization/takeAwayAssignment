@@ -28,17 +28,17 @@ jobs:
       - run:
           name: Install tools
           command: |
-            python --version
-            pip install --upgrade pip
-            python -m setuptools wheel
+            python3 --version
+            pip3 install --upgrade pip
+            python3 -m setuptools wheel
       - run:
           name: Install requirements
           command: pip install -r requirements.txt
       - run:
           name: Run tests
           command: |
-            pip install pytest
-            pip install pytest-cov
+            pip3 install pytest
+            pip3 install pytest-cov
             pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
       - run:
           name: Generate test report
