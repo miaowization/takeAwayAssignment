@@ -20,14 +20,18 @@ steps:
   displayName: Install Google Chrome
 
 - script: |
+    wget -O allure.zip https://github.com/allure-framework/allure2/releases/tag/2.13.5
+    unzip allure.zip
+  displayName: Install Allure
+
+- script: |
     sudo apt-add-repository ppa:qameta/allure
     sudo apt-get update
-    sudo apt-get install allure
     sudo apt-get install firefox
-  displayName: Install allure and firefox
+  displayName: Install Firefox
 
 - script: python -m pip install --upgrade pip setuptools wheel
-  displayName: 'Install tools'
+  displayName: Install tools
 
 - script: pip install -r requirements.txt
   displayName: Install python requirements
@@ -38,7 +42,7 @@ steps:
     pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
-- script: allure generate tmp/my_allure_results
+- script: allure/bin/allure generate tmp/my_allure_results
   displayName: Generate test report
 
 - publish: $(System.DefaultWorkingDirectory)/allure-report
