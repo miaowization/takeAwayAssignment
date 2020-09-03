@@ -21,3 +21,7 @@ class BasePage(PageFactory):
     def wait_until_present(self, element):
         self.wait.until(EC.presence_of_element_located((element._locator[0],
                                                        element._locator[1])))
+
+    def wait_until_invisible(self, element):
+        self.wait.until(EC.invisibility_of_element_located((element._locator[0],
+                                                       element._locator[1])))
