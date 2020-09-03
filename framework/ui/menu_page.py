@@ -8,5 +8,7 @@ class MenuPage(BasePage):
 
     locators = {
         'first_menu_option': ('XPATH', '//*[contains(@class, "add-to-basket-button")]'),
-        'order_button' : ('XPATH', '//*[contains(@class,"order-button")]')
+        'order_button': ('XPATH', '//*[contains(@class,"order-button")]'),
+        'side_dish': ('XPATH', '//*[@class="sidedishformcontainer"]'),
+        'add_value': ('XPATH', '//*[contains(@class,"sidedish-add-button")]')
         }

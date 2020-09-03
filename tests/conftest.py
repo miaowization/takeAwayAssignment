@@ -13,7 +13,10 @@ def pytest_addoption(parser):
 
 @pytest.fixture
 def driver(request):
-    headless = bool(request.config.getoption('--headless'))
+    if request.config.getoption('--headless') == 'True':
+        headless = True
+    else:
+        headless = False
     browser = request.config.getoption('--browser')
 
     def create_chrome_driver():

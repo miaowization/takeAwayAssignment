@@ -29,14 +29,17 @@ def test_case1(driver):
         restr_page = RestaurantsPage(driver)
         restr_page.wait_until_text_in_element((By.XPATH, "//*[@class='topbar__title-container']/button"),'8888-alpha')
         assert restr_page.top_bar_post_code.text == '8888-alpha'
-        restr_page.search_restaurants_field.set_text('Shabu Shabu Test')
+        restr_page.search_restaurants_field.set_text('TEST Restaurant Selenium')
         restr_page.wait_until_present(restr_page.first_restaurant)
         restr_page.first_restaurant.click()
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
         menu_page.first_menu_option.click()
+        if menu_page.side_dish.is_displayed():
+            menu_page.add_value.is_displayed()
+            menu_page.add_value.click()
         menu_page.order_button.click()
-    with allure.step('Make a chekout'):
+    with allure.step('Make a checkout'):
         checkout_page = CheckoutPage(driver)
         checkout_page.wait_until_present(checkout_page.address)
         checkout_page.address.set_text('main street 2415')
