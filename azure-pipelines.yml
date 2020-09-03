@@ -42,7 +42,7 @@ steps:
     pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
-- script: allure2-2.13.5/bin/allure generate tmp/my_allure_results
+- script: allure2-2.13.5/allure-commandline/src/main/java/io/qameta/allure generate tmp/my_allure_results
   displayName: Generate test report
 
 - publish: $(System.DefaultWorkingDirectory)/allure-report
