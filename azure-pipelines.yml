@@ -20,7 +20,7 @@ steps:
   displayName: Install Google Chrome
 
 - script: |
-    wget -O allure.zip https://github.com/allure-framework/allure2/releases/tag/2.13.5
+    wget -O allure.zip https://github.com/allure-framework/allure2/archive/2.13.5.zip
     unzip allure.zip
   displayName: Install Allure
 
