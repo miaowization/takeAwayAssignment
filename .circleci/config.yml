@@ -27,8 +27,8 @@ jobs:
             sudo apt-add-repository ppa:qameta/allure
             sudo apt-get update
             sudo apt-get install firefox
-            sudo apt install firefox-geckodriver
-            which geckodriver
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz
+            tar -xvzf geckodriver*
             sudo chmod +x geckodriver
             sudo mv geckodriver /usr/local/bin/
       - run:
