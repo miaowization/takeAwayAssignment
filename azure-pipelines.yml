@@ -20,11 +20,17 @@ steps:
     sudo apt-get install allure
   displayName: Install allure
 
+- script: python -m pip install --upgrade pip setuptools wheel
+  displayName: 'Install tools'
+
+- script: pip3 install -r requirements.txt
+  displayName: Install python requirements
+
 - script: |
-  pip install --upgrade setuptools
-  pip install -r requirements.txt
-  pytest --alluredir=tmp/my_allure_results
-  displayName: Install python requirements and run tests
+    pip install pytest
+    pip install pytest-cov
+    pytest tests --doctest-modules --alluredir=tmp/my_allure_results
+  displayName: 'Test with pytest'
 
 - script: allure serve tmp/my_allure_results
   displayName: Get test results in HTML 
