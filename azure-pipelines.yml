@@ -20,15 +20,11 @@ steps:
   displayName: Install Google Chrome
 
 - script: |
-    wget -O [firefox-latest.tar.bz2] https://download.mozilla.org/?product=firefox-latest&os=linux&lang=en-US
-    sudo dpkg -i firefox-latest.tar.bz2
-  displayName: Install Firefox
-
-- script: |
     sudo apt-add-repository ppa:qameta/allure
     sudo apt-get update
     sudo apt-get install allure
-  displayName: Install allure
+    sudo apt-get install firefox
+  displayName: Install allure and firefox
 
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
