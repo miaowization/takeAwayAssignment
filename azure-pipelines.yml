@@ -16,9 +16,10 @@ steps:
 - script: pip3 install -U -r requirements.txt
   displayName: Install python requirements
 
-- script: sudo apt-add-repository ppa:qameta/allure
-          sudo apt-get update 
-          sudo apt-get install allure
+- script: |
+    sudo apt-add-repository ppa:qameta/allure
+    sudo apt-get update
+    sudo apt-get install allure
   displayName: Install allure
 
 - script: pytest --alluredir=tmp/my_allure_results
