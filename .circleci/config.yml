@@ -39,7 +39,9 @@ jobs:
 
       - run:
           name: Setup webdrivers
-          command: webdrivermanager firefox chrome --linkpath /usr/local/bin
+          command: |
+            pip install webdrivermanager
+            webdrivermanager firefox chrome --linkpath /usr/local/bin
       - run:
           name: Run tests
           command: |
