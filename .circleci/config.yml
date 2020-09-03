@@ -2,14 +2,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: python:3.8.5
     steps:
       - checkout
-      - run:
-          name: "Switch to Python v3.7"
-          command: |
-            pyenv versions
-            pyenv global 3.7.0
       - run:
           name: Install Google Chrome and chromedriver
           command: |
