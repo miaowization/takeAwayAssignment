@@ -6,6 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Switch to Python v3.7"
+          command: |
+            pyenv versions
+            pyenv global 3.7.0
+      - run:
           name: Install Google Chrome
           command: |
             wget -O google-chrome-latest.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -28,17 +33,17 @@ jobs:
       - run:
           name: Install tools
           command: |
-            python3 --version
-            pip3 install --upgrade pip
-            python3 -m setuptools wheel
+            python --version
+            pip install --upgrade pip
+            python -m setuptools wheel
       - run:
           name: Install requirements
           command: pip install -r requirements.txt
       - run:
           name: Run tests
           command: |
-            pip3 install pytest
-            pip3 install pytest-cov
+            pip install pytest
+            pip install pytest-cov
             pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
       - run:
           name: Generate test report
