@@ -15,9 +15,14 @@ steps:
     versionSpec: '3.6'
 
 - script: |
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    wget -O google-chrome-latest.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-latest.deb
   displayName: Install Google Chrome
+
+- script: |
+    wget -O [firefox-latest.tar.bz2] https://download.mozilla.org/?product=firefox-latest&os=linux&lang=en-US
+    sudo dpkg -i firefox-latest.tar.bz2
+  displayName: Install Firefox
 
 - script: |
     sudo apt-add-repository ppa:qameta/allure
@@ -28,15 +33,17 @@ steps:
 - script: python -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 
-- script: pip3 install -r requirements.txt
+- script: pip install -r requirements.txt
   displayName: Install python requirements
 
 - script: |
     pip install pytest
     pip install pytest-cov
-    pytest tests --doctest-modules --alluredir=tmp/my_allure_results
+    pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
   displayName: 'Test with pytest'
 
 - script: allure generate tmp/my_allure_results
   displayName: Generate test report
-  
+
+- publish: $(System.DefaultWorkingDirectory)/allure-report
+  artifact: index.html
