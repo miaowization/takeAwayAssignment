@@ -1,5 +1,5 @@
 {
-  "uid" : "b66000c89bad60",
+  "uid" : "5a8704afa1d60737",
   "name" : "Basic order",
   "fullName" : "tests.test_case1#test_case1",
   "historyId" : "01ccce76c65e8c115f693828e808eb28",
@@ -97,9 +97,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "b0af5e2ff959bf7b",
+      "uid" : "86b036d1f6c4c2b6",
       "name" : "stdout",
-      "source" : "b0af5e2ff959bf7b.txt",
+      "source" : "86b036d1f6c4c2b6.txt",
       "type" : "text/plain",
       "size" : 156
     } ],
@@ -173,6 +173,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b66000c89bad60.json",
+  "source" : "5a8704afa1d60737.json",
   "parameterValues" : [ ]
 }
