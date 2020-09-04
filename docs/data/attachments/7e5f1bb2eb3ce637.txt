@@ -1,1 +1,0 @@
-[32mINFO    [0m WDM:logger.py:24 Driver [/Users/aigulgabi/.wdm/drivers/geckodriver/macos/v0.27.0/geckodriver] found in cache

@@ -1,3 +1,0 @@
-
-Looking for [geckodriver v0.27.0 macos] driver in cache 
-File found in cache by path [/Users/aigulgabi/.wdm/drivers/geckodriver/v0.27.0/macos/geckodriver]
