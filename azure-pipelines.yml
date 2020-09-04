@@ -57,7 +57,7 @@ steps:
     git pull origin master
     git add git add --all docs/
     git commit -m "updated allure report"
-    git push origin master
+    git push origin gh-pages
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
