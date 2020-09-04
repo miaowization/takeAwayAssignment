@@ -1,5 +1,5 @@
 {
-  "uid" : "8021b30207c0cd0e",
+  "uid" : "d2da3f27fbae30e8",
   "name" : "Basic order",
   "fullName" : "tests.test_case1#test_case1",
   "historyId" : "01ccce76c65e8c115f693828e808eb28",
@@ -82,15 +82,15 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "a3944a543ad7a42",
+      "uid" : "1cb5a49f95d54bc4",
       "name" : "log",
-      "source" : "a3944a543ad7a42.txt",
+      "source" : "1cb5a49f95d54bc4.txt",
       "type" : "text/plain",
       "size" : 126
     }, {
-      "uid" : "335506eb066f176f",
+      "uid" : "ff5548b836a7b0a3",
       "name" : "stderr",
-      "source" : "335506eb066f176f.txt",
+      "source" : "ff5548b836a7b0a3.txt",
       "type" : "text/plain",
       "size" : 100
     } ],
@@ -164,6 +164,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "8021b30207c0cd0e.json",
+  "source" : "d2da3f27fbae30e8.json",
   "parameterValues" : [ ]
 }

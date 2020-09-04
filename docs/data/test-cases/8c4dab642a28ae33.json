@@ -1,5 +1,5 @@
 {
-  "uid" : "2e5a63cfb58cf4ca",
+  "uid" : "8c4dab642a28ae33",
   "name" : "test_case1",
   "fullName" : "tests.test_case1#test_case1",
   "historyId" : "01ccce76c65e8c115f693828e808eb28",
@@ -31,9 +31,9 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "a48f05e0a8a92b0",
+      "uid" : "4ea3729da267f329",
       "name" : "stdout",
-      "source" : "a48f05e0a8a92b0.txt",
+      "source" : "4ea3729da267f329.txt",
       "type" : "text/plain",
       "size" : 169
     } ],
@@ -107,6 +107,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "2e5a63cfb58cf4ca.json",
+  "source" : "8c4dab642a28ae33.json",
   "parameterValues" : [ ]
 }

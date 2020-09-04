@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Exception: An exception of type TimeoutException occurred. With Element -: side_dish",
+      "children" : [ {
+        "name" : "Basic order",
+        "uid" : "7b6702b7828ede85",
+        "parentUid" : "58340b3266292383014906f9b885b603",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599214122124,
+          "stop" : 1599214152376,
+          "duration" : 30252
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "58340b3266292383014906f9b885b603"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
 }
