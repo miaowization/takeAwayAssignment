@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    cd docs
+    echo "While I thought that I was learning how to live, I have been learning how to die." > quote1.txt
+  displayName: Create file to write
+
+- script: allure generate tmp/my_allure_results --clean -o docs
+  displayName: Generate test report
+  condition: always()
+
+- script: |
+    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+    git config --global user.email "aigul.g.r@mail.ru"
+    git config --global user.name "miaowization"
+    git add docs
+    git commit -m "updated allure report"
+    git push origin HEAD:master
+  condition: always()
+
+- publish: $(System.DefaultWorkingDirectory)/docs
+  artifact: .
