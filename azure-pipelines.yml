@@ -55,7 +55,7 @@ steps:
     git config --global user.name "miaowization"
     git checkout master
     git pull origin master
-    git add git add --all docs/
+    git add --all docs/
     git commit -m "updated allure report"
     git push origin gh-pages
   condition: always()
