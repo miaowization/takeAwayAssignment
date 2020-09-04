@@ -35,9 +35,12 @@ def test_case1(driver):
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
         menu_page.first_menu_option.click()
-        if menu_page.side_dish.is_displayed():
-            menu_page.add_value.is_displayed()
-            menu_page.add_value.click()
+        try:
+            if menu_page.side_dish.is_displayed():
+                menu_page.add_value.is_displayed()
+                menu_page.add_value.click()
+        except:
+            pass
         menu_page.order_button.click()
     with allure.step('Make a checkout'):
         checkout_page = CheckoutPage(driver)
