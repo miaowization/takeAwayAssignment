@@ -1,5 +1,17 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Basic order",
+    "uid" : "7236baed71d631d6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1599231676948,
+      "stop" : 1599231705010,
+      "duration" : 28062
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ],
   "name" : "behaviors"
 }

@@ -1,1 +1,11 @@
-[ ]
+[ {
+  "uid" : "7236baed71d631d6",
+  "name" : "Basic order",
+  "time" : {
+    "start" : 1599231676948,
+    "stop" : 1599231705010,
+    "duration" : 28062
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
