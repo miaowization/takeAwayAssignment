@@ -26,11 +26,12 @@ steps:
   condition: always()
 
 - script: |
+    git remote set-url origin https://miaowization:$(token)@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
-    git add docs
+    git add docs --all
     git commit -m "updated allure report"
-    git push https://$(username):$(password)@github.com/miaowization/takeAwayAssignment.git master
+    git push origin master
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
