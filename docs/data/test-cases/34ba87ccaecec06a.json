@@ -1,0 +1,327 @@
+{
+  "uid" : "34ba87ccaecec06a",
+  "name" : "Basic order",
+  "fullName" : "tests.test_case1#test_case1",
+  "historyId" : "01ccce76c65e8c115f693828e808eb28",
+  "time" : {
+    "start" : 1599170218760,
+    "stop" : 1599170230686,
+    "duration" : 11926
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1599170215527,
+      "stop" : 1599170218759,
+      "duration" : 3232
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Open homepage and setup address",
+      "time" : {
+        "start" : 1599170218760,
+        "stop" : 1599170222355,
+        "duration" : 3595
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Choose a restaurant",
+      "time" : {
+        "start" : 1599170222356,
+        "stop" : 1599170223945,
+        "duration" : 1589
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Choose a dish from the menu",
+      "time" : {
+        "start" : 1599170223945,
+        "stop" : 1599170225498,
+        "duration" : 1553
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Make a checkout",
+      "time" : {
+        "start" : 1599170225498,
+        "stop" : 1599170230686,
+        "duration" : 5188
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "cce8f59a0374c53f",
+      "name" : "log",
+      "source" : "cce8f59a0374c53f.txt",
+      "type" : "text/plain",
+      "size" : 126
+    }, {
+      "uid" : "a7d00b397af9ff7a",
+      "name" : "stderr",
+      "source" : "a7d00b397af9ff7a.txt",
+      "type" : "text/plain",
+      "size" : 100
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::1",
+    "time" : {
+      "start" : 1599170230687,
+      "stop" : 1599170230687,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::tear_down",
+    "time" : {
+      "start" : 1599170230687,
+      "stop" : 1599170231076,
+      "duration" : 389
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_case1"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Pro-AigulGabi.local"
+  }, {
+    "name" : "thread",
+    "value" : "91087-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_case1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1a52553d8c010b51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599170180479,
+        "stop" : 1599170190844,
+        "duration" : 10365
+      }
+    }, {
+      "uid" : "46d5dca2448a2bfd",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: Element <span class=\"button_add_value\"> could not be scrolled into view",
+      "time" : {
+        "start" : 1599168795058,
+        "stop" : 1599168800334,
+        "duration" : 5276
+      }
+    }, {
+      "uid" : "8021b30207c0cd0e",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.ElementNotInteractableException: Message: Element <span class=\"button_add_value\"> could not be scrolled into view",
+      "time" : {
+        "start" : 1599168619359,
+        "stop" : 1599168633967,
+        "duration" : 14608
+      }
+    }, {
+      "uid" : "e5ee60b1ab5bdcac",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
+      "time" : {
+        "start" : 1599168211659,
+        "stop" : 1599168227448,
+        "duration" : 15789
+      }
+    }, {
+      "uid" : "ca442163e2d1f94f",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
+      "time" : {
+        "start" : 1599168061102,
+        "stop" : 1599168076417,
+        "duration" : 15315
+      }
+    }, {
+      "uid" : "289a27243f3b5a05",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
+      "time" : {
+        "start" : 1599167976636,
+        "stop" : 1599167991894,
+        "duration" : 15258
+      }
+    }, {
+      "uid" : "b1ae8bf038ac27ba",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: first_restaurant",
+      "time" : {
+        "start" : 1599167834607,
+        "stop" : 1599167850594,
+        "duration" : 15987
+      }
+    }, {
+      "uid" : "8585f7fe56ea4143",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: first_restaurant",
+      "time" : {
+        "start" : 1599167781592,
+        "stop" : 1599167795780,
+        "duration" : 14188
+      }
+    }, {
+      "uid" : "fddabbe184b5a451",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: first_restaurant",
+      "time" : {
+        "start" : 1599167708979,
+        "stop" : 1599167724573,
+        "duration" : 15594
+      }
+    }, {
+      "uid" : "bff5580a7ecff014",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599148479887,
+        "stop" : 1599148491911,
+        "duration" : 12024
+      }
+    }, {
+      "uid" : "60e1f87dcf6fad13",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599148082359,
+        "stop" : 1599148094028,
+        "duration" : 11669
+      }
+    }, {
+      "uid" : "b66000c89bad60",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
+      "time" : {
+        "start" : 1599147898668,
+        "stop" : 1599147914085,
+        "duration" : 15417
+      }
+    }, {
+      "uid" : "e36d65eb34fc082d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599147716160,
+        "stop" : 1599147733445,
+        "duration" : 17285
+      }
+    }, {
+      "uid" : "1d845c6d86678a9c",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
+      "time" : {
+        "start" : 1599147338032,
+        "stop" : 1599147358752,
+        "duration" : 20720
+      }
+    }, {
+      "uid" : "16d0f6d39df5afea",
+      "status" : "broken",
+      "statusDetails" : "Exception: An exception of type TimeoutException occurred. With Element -: first_restaurant",
+      "time" : {
+        "start" : 1599080426157,
+        "stop" : 1599080440578,
+        "duration" : 14421
+      }
+    }, {
+      "uid" : "17b39d562cd0bf6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599080193323,
+        "stop" : 1599080204135,
+        "duration" : 10812
+      }
+    }, {
+      "uid" : "2e5a63cfb58cf4ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599079783435,
+        "stop" : 1599079795422,
+        "duration" : 11987
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "34ba87ccaecec06a.json",
+  "parameterValues" : [ ]
+}
