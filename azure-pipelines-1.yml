@@ -18,6 +18,7 @@ steps:
 - script: |
     cd docs
     echo "While I thought that I was learning how to live, I have been learning how to die." > quote1.txt
+    cd ..
   displayName: Create file to write
 
 - script: allure generate tmp/my_allure_results --clean -o docs
@@ -25,7 +26,6 @@ steps:
   condition: always()
 
 - script: |
-    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
     git add docs
