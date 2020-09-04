@@ -47,6 +47,7 @@ steps:
 
 - script: allure generate tmp/my_allure_results --clean -o docs
   displayName: Generate test report
+  condition: always()
 
 - script: |
     git config --global --add url."git@github.com:".insteadOf "https://github.com/"
@@ -55,6 +56,7 @@ steps:
     git add docs
     git commit -m "updated allure report"
     git push origin HEAD:master
+  condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
   artifact: .
