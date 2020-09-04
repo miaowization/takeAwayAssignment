@@ -53,11 +53,11 @@ steps:
     git remote set-url origin https://miaowization:$TOKEN@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
-    git checkout master
-    git pull origin master
+    git checkout gh-pages
+    git pull origin gh-pages
     git add --all docs/
     git commit -m "updated allure report"
-    git push origin master
+    git push origin gh-pages
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
