@@ -52,7 +52,7 @@ steps:
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
     git add docs
-    git commit
+    git commit -m "updated allure report"
     git push origin HEAD:master
 
 - publish: $(System.DefaultWorkingDirectory)/docs
