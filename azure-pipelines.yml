@@ -49,6 +49,8 @@ steps:
   displayName: Generate test report
 
 - script: |
+    git config --global user.email "aigul.g.r@mail.ru"
+    git config --global user.name "miaowization"
     git add docs
     git commit
     git push origin HEAD:master
