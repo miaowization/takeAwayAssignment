@@ -1,25 +1,26 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
   "children" : [ {
     "name" : "tests",
     "children" : [ {
       "name" : "test_case1",
       "children" : [ {
         "name" : "Basic order",
-        "uid" : "cd9c6b041ec9201c",
+        "uid" : "7b6702b7828ede85",
         "parentUid" : "f6bf98bf1402589c2cb4793ac77c8aa5",
-        "status" : "passed",
+        "status" : "broken",
         "time" : {
-          "start" : 1599227668815,
-          "stop" : 1599227685509,
-          "duration" : 16694
+          "start" : 1599214122124,
+          "stop" : 1599214152376,
+          "duration" : 30252
         },
         "flaky" : false,
+        "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "f6bf98bf1402589c2cb4793ac77c8aa5"
     } ],
     "uid" : "e387fa4bb326b54ea8c19c2822aba374"
-  } ],
-  "name" : "suites"
+  } ]
 }
