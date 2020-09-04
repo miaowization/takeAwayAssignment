@@ -29,6 +29,7 @@ steps:
     git remote set-url origin https://miaowization:$(token)@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
+    git pull origin master
     git add docs --all
     git commit -m "updated allure report"
     git push origin master
