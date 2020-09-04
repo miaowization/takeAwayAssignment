@@ -1,22 +1,21 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "name" : "packages",
   "children" : [ {
     "name" : "tests.test_case1",
     "children" : [ {
       "name" : "Basic order",
-      "uid" : "7b6702b7828ede85",
+      "uid" : "cd9c6b041ec9201c",
       "parentUid" : "e4b8ca052de96b1a76a447e71f7d4d5a",
-      "status" : "broken",
+      "status" : "passed",
       "time" : {
-        "start" : 1599214122124,
-        "stop" : 1599214152376,
-        "duration" : 30252
+        "start" : 1599227668815,
+        "stop" : 1599227685509,
+        "duration" : 16694
       },
       "flaky" : false,
-      "newFailed" : false,
       "parameters" : [ ]
     } ],
     "uid" : "tests.test_case1"
-  } ]
+  } ],
+  "name" : "packages"
 }

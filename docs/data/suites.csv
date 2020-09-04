@@ -1,2 +1,2 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri Sep 04 12:08:42 CEST 2020","Fri Sep 04 12:09:12 CEST 2020","30252","tests","test_case1","","","","Basic order",""
+"Status","Name","Duration in ms","Description"
+"passed","tests.test_case1#test_case1","16694",""
