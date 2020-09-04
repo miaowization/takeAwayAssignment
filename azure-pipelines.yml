@@ -3,8 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -53,11 +51,11 @@ steps:
     git remote set-url origin https://miaowization:$TOKEN@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
-    git checkout gh-pages
-    git pull origin gh-pages
+    git checkout master
+    git pull origin master
     git add --all docs/
     git commit -m "updated allure report"
-    git push origin gh-pages
+    git push origin master
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
