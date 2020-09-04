@@ -3,22 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.6'
-
-- script: |
-    wget -O google-chrome-latest.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg -i google-chrome-latest.deb
-  displayName: Install Google Chrome
-
 - script: |
     curl -o allure-2.7.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.7.0/allure-2.7.0.tgz
     sudo tar -zxvf allure-2.7.0.tgz -C /opt/
@@ -28,34 +16,22 @@ steps:
   displayName: Install Allure
 
 - script: |
-    sudo apt-add-repository ppa:qameta/allure
-    sudo apt-get update
-    sudo apt-get install firefox
-  displayName: Install Firefox
-
-- script: python -m pip install --upgrade pip setuptools wheel
-  displayName: Install tools
-
-- script: pip install -r requirements.txt
-  displayName: Install python requirements
-
-- script: |
-    pip install pytest
-    pip install pytest-cov
-    pytest tests --headless True --browser 'Firefox' --alluredir=tmp/my_allure_results
-  displayName: 'Test with pytest'
+    cd docs
+    echo "While I thought that I was learning how to live, I have been learning how to die." > quote1.txt
+    cd ..
+  displayName: Create file to write
 
 - script: allure generate tmp/my_allure_results --clean -o docs
   displayName: Generate test report
   condition: always()
 
 - script: |
-    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+    git remote set-url origin https://miaowization:$(token)@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
-    git add docs
+    git add docs --all
     git commit -m "updated allure report"
-    git push origin HEAD:master
+    git push origin master
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
