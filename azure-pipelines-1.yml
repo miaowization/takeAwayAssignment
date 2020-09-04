@@ -26,7 +26,7 @@ steps:
   condition: always()
 
 - script: |
-    git remote set-url origin https://miaowization:$(token)@github.com/miaowization/takeAwayAssignment.git
+    git remote set-url origin https://miaowization:$TOKEN@github.com/miaowization/takeAwayAssignment.git
     git config --global user.email "aigul.g.r@mail.ru"
     git config --global user.name "miaowization"
     git pull origin master
