@@ -1,12 +1,12 @@
 {
-  "uid" : "60e1f87dcf6fad13",
+  "uid" : "4a967f015d29e4d",
   "name" : "Basic order",
   "fullName" : "tests.test_case1#test_case1",
   "historyId" : "01ccce76c65e8c115f693828e808eb28",
   "time" : {
-    "start" : 1599148082359,
-    "stop" : 1599148094028,
-    "duration" : 11669
+    "start" : 1599147716160,
+    "stop" : 1599147733445,
+    "duration" : 17285
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "driver",
     "time" : {
-      "start" : 1599148079457,
-      "stop" : 1599148082356,
-      "duration" : 2899
+      "start" : 1599147713251,
+      "stop" : 1599147716158,
+      "duration" : 2907
     },
     "status" : "passed",
     "steps" : [ ],
@@ -32,9 +32,9 @@
     "steps" : [ {
       "name" : "Open homepage and setup address",
       "time" : {
-        "start" : 1599148082359,
-        "stop" : 1599148086553,
-        "duration" : 4194
+        "start" : 1599147716160,
+        "stop" : 1599147724903,
+        "duration" : 8743
       },
       "status" : "passed",
       "steps" : [ ],
@@ -47,9 +47,9 @@
     }, {
       "name" : "Choose a restaurant",
       "time" : {
-        "start" : 1599148086553,
-        "stop" : 1599148087773,
-        "duration" : 1220
+        "start" : 1599147724903,
+        "stop" : 1599147727041,
+        "duration" : 2138
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,9 +62,9 @@
     }, {
       "name" : "Choose a dish from the menu",
       "time" : {
-        "start" : 1599148087774,
-        "stop" : 1599148088906,
-        "duration" : 1132
+        "start" : 1599147727041,
+        "stop" : 1599147728211,
+        "duration" : 1170
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,9 +77,9 @@
     }, {
       "name" : "Make a chekout",
       "time" : {
-        "start" : 1599148088906,
-        "stop" : 1599148094028,
-        "duration" : 5122
+        "start" : 1599147728211,
+        "stop" : 1599147733444,
+        "duration" : 5233
       },
       "status" : "passed",
       "steps" : [ ],
@@ -91,9 +91,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "7f4b0bf241866bcb",
+      "uid" : "8240d479f6815eaa",
       "name" : "stdout",
-      "source" : "7f4b0bf241866bcb.txt",
+      "source" : "8240d479f6815eaa.txt",
       "type" : "text/plain",
       "size" : 156
     } ],
@@ -106,8 +106,8 @@
   "afterStages" : [ {
     "name" : "driver::1",
     "time" : {
-      "start" : 1599148094029,
-      "stop" : 1599148094029,
+      "start" : 1599147733445,
+      "stop" : 1599147733445,
       "duration" : 0
     },
     "status" : "passed",
@@ -121,9 +121,9 @@
   }, {
     "name" : "driver::tear_down",
     "time" : {
-      "start" : 1599148094029,
-      "stop" : 1599148094431,
-      "duration" : 402
+      "start" : 1599147733446,
+      "stop" : 1599147733956,
+      "duration" : 510
     },
     "status" : "passed",
     "steps" : [ ],
@@ -145,7 +145,7 @@
     "value" : "MacBook-Pro-AigulGabi.local"
   }, {
     "name" : "thread",
-    "value" : "79055-MainThread"
+    "value" : "78819-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -167,6 +167,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "60e1f87dcf6fad13.json",
+  "source" : "4a967f015d29e4d.json",
   "parameterValues" : [ ]
 }
