@@ -30,7 +30,7 @@ steps:
     git config --global user.name "miaowization"
     git add docs
     git commit -m "updated allure report"
-    git push https://$(username):$(env:PASSWORD)@github.com/miaowization/takeAwayAssignment.git master
+    git push https://$(username):$(password)@github.com/miaowization/takeAwayAssignment.git master
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
