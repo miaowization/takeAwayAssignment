@@ -1,25 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "Exception: An exception of type TimeoutException occurred. With Element -: address",
-      "children" : [ {
-        "name" : "Basic order",
-        "uid" : "7236baed71d631d6",
-        "parentUid" : "440e2ea5aceb1093fbc7cd024e628a05",
-        "status" : "broken",
-        "time" : {
-          "start" : 1599231676948,
-          "stop" : 1599231705010,
-          "duration" : 28062
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "440e2ea5aceb1093fbc7cd024e628a05"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ],
+  "children" : [ ],
   "name" : "categories"
 }
