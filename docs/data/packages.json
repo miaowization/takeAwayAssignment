@@ -1,5 +1,21 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "tests.test_case1",
+    "children" : [ {
+      "name" : "Basic order",
+      "uid" : "9c09c13267582949",
+      "parentUid" : "e4b8ca052de96b1a76a447e71f7d4d5a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1599345080476,
+        "stop" : 1599345101408,
+        "duration" : 20932
+      },
+      "flaky" : false,
+      "parameters" : [ "{'post_code': '8888', 'post_code_second': '8888-alpha', 'restaurant_name': 'TEST Restaurant Selenium', 'address_checkout': 'main street 2415', 'post_code_checkout': '8888AA', 'city_checkout': 'Enschede', 'name_checkout': 'TestUSer', 'phone_checkout': '1234567890', 'email_checkout': 'testuser@test.test', 'delivery_time': 'asap'}" ]
+    } ],
+    "uid" : "tests.test_case1"
+  } ],
   "name" : "packages"
 }
