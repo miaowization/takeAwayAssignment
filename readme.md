@@ -9,7 +9,7 @@ the environment needed to run tests.
 https://gabidulina.visualstudio.com/takeAwayQAAssignment/_build?definitionId=1 
 in your browser. There you will find a pipeline with these steps 
 
-![pipeline steps](resources/pipeline_steps.jpg =250x) 
+![pipeline steps](resources/pipeline_steps.jpg) 
 
 ###### If you want to do it the hard way follow instruction:
 1. Clone the repository and go to the project folder.
