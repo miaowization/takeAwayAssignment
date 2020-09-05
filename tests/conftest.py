@@ -7,6 +7,9 @@ from selenium.webdriver.firefox.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 
+from tests import get_test_data
+
+
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="Firefox")
     parser.addoption("--headless", action="store", default="True")
@@ -52,3 +55,18 @@ def driver(request):
 
     request.addfinalizer(tear_down)
     yield driver_
+
+
+def pytest_generate_tests(metafunc):
+    def parametrize(test_data):
+        for key, value in test_data.items():
+            param_keys = [k.strip() for k in key.split(',')]
+            diff = set(param_keys) - set(metafunc.fixturenames)
+            if diff:
+                raise AssertionError(f'{diff} fixtures were set in JSON data, '
+                                     'but not found in test')
+            parameters = value if isinstance(value, list) else [value]
+            metafunc.parametrize(key, parameters)
+    data = get_test_data(metafunc.definition)
+    if data:
+        parametrize(data)

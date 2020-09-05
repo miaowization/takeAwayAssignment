@@ -1,0 +1,16 @@
+{
+  "test_case1": {
+    "data": {
+      "post_code": "8888",
+      "post_code_second": "8888-alpha",
+      "restaurant_name": "TEST Restaurant Selenium",
+      "address_checkout": "main street 2415",
+      "post_code_checkout": "8888AA",
+      "city_checkout": "Enschede",
+      "name_checkout": "TestUSer",
+      "phone_checkout": "1234567890",
+      "email_checkout": "testuser@test.test",
+      "delivery_time": "asap"
+    }
+  }
+}
