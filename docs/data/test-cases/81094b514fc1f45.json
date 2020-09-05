@@ -1,21 +1,21 @@
 {
-  "uid" : "9c09c13267582949",
+  "uid" : "81094b514fc1f45",
   "name" : "Basic order",
   "fullName" : "tests.test_case1#test_case1",
   "historyId" : "f1b068818893661419b102eb04aba4b2",
   "time" : {
-    "start" : 1599345080476,
-    "stop" : 1599345101408,
-    "duration" : 20932
+    "start" : 1599345252222,
+    "stop" : 1599345270748,
+    "duration" : 18526
   },
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
     "name" : "driver",
     "time" : {
-      "start" : 1599345076605,
-      "stop" : 1599345080472,
-      "duration" : 3867
+      "start" : 1599345247519,
+      "stop" : 1599345252210,
+      "duration" : 4691
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
     "steps" : [ {
       "name" : "Open homepage and setup address",
       "time" : {
-        "start" : 1599345080476,
-        "stop" : 1599345087012,
-        "duration" : 6536
+        "start" : 1599345252222,
+        "stop" : 1599345257495,
+        "duration" : 5273
       },
       "status" : "passed",
       "steps" : [ ],
@@ -46,9 +46,9 @@
     }, {
       "name" : "Choose a restaurant",
       "time" : {
-        "start" : 1599345087012,
-        "stop" : 1599345090859,
-        "duration" : 3847
+        "start" : 1599345257495,
+        "stop" : 1599345260141,
+        "duration" : 2646
       },
       "status" : "passed",
       "steps" : [ ],
@@ -61,9 +61,9 @@
     }, {
       "name" : "Choose a dish from the menu",
       "time" : {
-        "start" : 1599345090859,
-        "stop" : 1599345093897,
-        "duration" : 3038
+        "start" : 1599345260141,
+        "stop" : 1599345262456,
+        "duration" : 2315
       },
       "status" : "passed",
       "steps" : [ ],
@@ -76,9 +76,9 @@
     }, {
       "name" : "Make a checkout",
       "time" : {
-        "start" : 1599345093897,
-        "stop" : 1599345101408,
-        "duration" : 7511
+        "start" : 1599345262456,
+        "stop" : 1599345270747,
+        "duration" : 8291
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,15 +90,15 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "d095110fe2d91fa4",
+      "uid" : "349b05cdbaba1c64",
       "name" : "log",
-      "source" : "d095110fe2d91fa4.txt",
+      "source" : "349b05cdbaba1c64.txt",
       "type" : "text/plain",
       "size" : 427
     }, {
-      "uid" : "264b0b3c6d8c4c",
+      "uid" : "89122088bc4dd67c",
       "name" : "stderr",
-      "source" : "264b0b3c6d8c4c.txt",
+      "source" : "89122088bc4dd67c.txt",
       "type" : "text/plain",
       "size" : 356
     } ],
@@ -111,8 +111,8 @@
   "afterStages" : [ {
     "name" : "driver::1",
     "time" : {
-      "start" : 1599345101409,
-      "stop" : 1599345101409,
+      "start" : 1599345270749,
+      "stop" : 1599345270749,
       "duration" : 0
     },
     "status" : "passed",
@@ -126,9 +126,9 @@
   }, {
     "name" : "driver::tear_down",
     "time" : {
-      "start" : 1599345101410,
-      "stop" : 1599345102042,
-      "duration" : 632
+      "start" : 1599345270749,
+      "stop" : 1599345271399,
+      "duration" : 650
     },
     "status" : "passed",
     "steps" : [ ],
@@ -147,10 +147,10 @@
     "value" : "test_case1"
   }, {
     "name" : "host",
-    "value" : "fv-az563"
+    "value" : "fv-az557"
   }, {
     "name" : "thread",
-    "value" : "9983-MainThread"
+    "value" : "9744-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -177,6 +177,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "9c09c13267582949.json",
+  "source" : "81094b514fc1f45.json",
   "parameterValues" : [ "{'post_code': '8888', 'post_code_second': '8888-alpha', 'restaurant_name': 'TEST Restaurant Selenium', 'address_checkout': 'main street 2415', 'post_code_checkout': '8888AA', 'city_checkout': 'Enschede', 'name_checkout': 'TestUSer', 'phone_checkout': '1234567890', 'email_checkout': 'testuser@test.test', 'delivery_time': 'asap'}" ]
 }
