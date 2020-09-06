@@ -1,11 +1,11 @@
 [ {
-  "uid" : "66e2ab20dc948330",
+  "uid" : "349cd661bf97d6f1",
   "name" : "Basic order",
   "time" : {
-    "start" : 1599390553579,
-    "stop" : 1599390572359,
-    "duration" : 18780
+    "start" : 1599391149471,
+    "stop" : 1599391154654,
+    "duration" : 5183
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 } ]

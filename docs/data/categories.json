@@ -1,5 +1,25 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'NoneType' object has no attribute '_locator'",
+      "children" : [ {
+        "name" : "Basic order",
+        "uid" : "349cd661bf97d6f1",
+        "parentUid" : "daac3eb9a8a3b749b00f449a580e54bb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1599391149471,
+          "stop" : 1599391154654,
+          "duration" : 5183
+        },
+        "flaky" : false,
+        "parameters" : [ "{'post_code': '8888', 'post_code_second': '8888-alpha', 'restaurant_name': 'TEST Restaurant Selenium', 'address_checkout': 'main street 2415', 'post_code_checkout': '8888AA', 'city_checkout': 'Enschede', 'name_checkout': 'TestUSer', 'phone_checkout': '1234567890', 'email_checkout': 'testuser@test.test', 'delivery_time': 'asap'}" ]
+      } ],
+      "uid" : "daac3eb9a8a3b749b00f449a580e54bb"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
