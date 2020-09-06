@@ -1,5 +1,9 @@
 # Setup project
 
+Minimal requirements to setup project locally:
+- Python 3.6 and higher
+- Pip3 
+
 Tech stack:
 - Python
 - Pytest as a test runner
@@ -11,7 +15,7 @@ There are 2 ways how you can get run the tests: locally on your computer or
 in Azure Devops pipeline which I created to relieve you from setting up 
 the environment needed to run tests.
 
-###### If you want to do it easy way:
+#### If you want to do it easy way:
 1. Open the link 
 https://gabidulina.visualstudio.com/takeAwayQAAssignment/_build?definitionId=1 
 in your browser. There you will find a pipeline with these steps:
@@ -33,7 +37,7 @@ Test report can be found here https://miaowization.github.io/takeAwayAssignment.
 Also it is published as pipeline artifact.
 ![pipeline artifact](resources/pipeline_artifact.png) 
 
-###### If you want to do it the hard way follow instruction:
+#### If you want to do it the hard way follow instruction:
 1. Clone the repository and go to the project folder.
 2. Install Google Chrome or Firefox if you don't have it.
 3. Install requirements
