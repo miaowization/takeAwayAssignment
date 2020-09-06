@@ -1,2 +1,2 @@
 "Status","Name","Duration in ms","Description"
-"broken","tests.test_case1#test_case1","5183",""
+"passed","tests.test_case1#test_case1","15868",""

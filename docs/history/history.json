@@ -2,20 +2,19 @@
   "f1b068818893661419b102eb04aba4b2" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "349cd661bf97d6f1",
-      "status" : "broken",
-      "statusDetails" : "AttributeError: 'NoneType' object has no attribute '_locator'",
+      "uid" : "b88feddc888ed2d5",
+      "status" : "passed",
       "time" : {
-        "start" : 1599391149471,
-        "stop" : 1599391154654,
-        "duration" : 5183
+        "start" : 1599391470958,
+        "stop" : 1599391486826,
+        "duration" : 15868
       }
     } ]
   }
