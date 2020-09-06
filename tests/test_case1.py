@@ -31,7 +31,7 @@ def test_case1(driver, data):
                                               data['post_code_second'])
         assert restr_page.top_bar_post_code.text == data['post_code_second']
         restr_page.search_restaurants_field.set_text(data['restaurant_name'])
-        restr_page.wait_until_present(restr_page.first_restaurant)
+        restr_page.wait_until_present(restr_page.first_restaurants)
         restr_page.first_restaurant.click()
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
