@@ -31,7 +31,7 @@ def test_case1(driver, data):
                                               data['post_code_second'])
         assert restr_page.top_bar_post_code.text == data['post_code_second']
         restr_page.search_restaurants_field.set_text(data['restaurant_name'])
-        restr_page.wait_until_present(restr_page.first_restaurants)
+        restr_page.wait_until_present(restr_page.first_restaurant)
         restr_page.first_restaurant.click()
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
@@ -56,7 +56,6 @@ def test_case1(driver, data):
         checkout_page.delivery_time.click()
         checkout_page.delivery_time.select_element_by_value(
             data['delivery_time'])
-        checkout_page.cash_payment.click()
         payments = str.split(checkout_page.amount_selector.text, '\n')
         payment = payments[1]
         checkout_page.amount_selector.click()
