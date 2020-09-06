@@ -56,6 +56,7 @@ def test_case1(driver, data):
         checkout_page.delivery_time.click()
         checkout_page.delivery_time.select_element_by_value(
             data['delivery_time'])
+        checkout_page.cash_payment.click()
         payments = str.split(checkout_page.amount_selector.text, '\n')
         payment = payments[1]
         checkout_page.amount_selector.click()
