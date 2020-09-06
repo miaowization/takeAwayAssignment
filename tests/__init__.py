@@ -4,6 +4,9 @@ import json
 
 
 def _get_trace_data(item):
+    """This method makes path to test data json file depending on test case location.
+    If test case has relative path 'tests/test_case'
+    then json file with test data should have path resources/tests/test_case"""
     dir_, py_file = split(item.location[0])
     dir_ = join('resources', dir_)
     json_file = join(dir_, f'{splitext(py_file)[0]}.json')
@@ -13,6 +16,7 @@ def _get_trace_data(item):
 
 
 def get_test_data(item):
+    """This method tries to extract dictionary with test data from path"""
     _, json_file, test_method = _get_trace_data(item)
     if not exists(json_file):
         return {}

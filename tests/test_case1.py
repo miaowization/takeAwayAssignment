@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+from os import environ
 
 import allure
 
+from configs.autotests_config import BASE_URL
 from framework.ui.checkout_page import CheckoutPage
 from framework.ui.home_page import HomePage
 from framework.ui.menu_page import MenuPage
@@ -11,7 +13,7 @@ from framework.ui.restaurants_page import RestaurantsPage
 @allure.title('Basic order')
 def test_case1(driver, data):
     with allure.step('Open homepage and setup address'):
-        driver.get('https://www.thuisbezorgd.nl/en/')
+        driver.get(BASE_URL)
         home_page = HomePage(driver,
                              post_code=data['post_code'],
                              post_code_second=data['post_code_second'])
@@ -22,8 +24,7 @@ def test_case1(driver, data):
         home_page.post_code.click()
         home_page.wait_until_present(home_page.post_code_second)
         home_page.post_code_second.click()
-        home_page.wait_until_url(
-            f"https://www.thuisbezorgd.nl/en/order-takeaway-{data['post_code_second']}?search")
+        home_page.wait_until_url(f"{BASE_URL}/order-takeaway-{data['post_code_second']}?search")
 
     with allure.step('Choose a restaurant'):
         restr_page = RestaurantsPage(driver)
@@ -36,6 +37,9 @@ def test_case1(driver, data):
     with allure.step('Choose a dish from the menu'):
         menu_page = MenuPage(driver)
         menu_page.first_menu_option.click()
+        # when a dish has a side dish there can be problems
+        # clicking it sometimes,
+        # I didn't find a workaround with this.
         try:
             if menu_page.side_dish.is_displayed():
                 menu_page.add_value.is_displayed()

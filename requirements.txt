@@ -7,3 +7,4 @@ pytest-html==2.0.0
 pytest-xdist==v1.31.0
 pytest-ordering==0.6
 selenium-page-factory==2.0
+python-dotenv==0.10.3

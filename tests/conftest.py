@@ -11,11 +11,21 @@ from tests import get_test_data
 
 
 def pytest_addoption(parser):
+    """This method adds options for pytest runner"""
     parser.addoption("--browser", action="store", default="Firefox")
     parser.addoption("--headless", action="store", default="True")
 
+
 @pytest.fixture
 def driver(request):
+    """This method creates webdriver object to use in tests.
+    webdriver can represent ChromeDriver of Geckodriver (for Firefox)
+    and can either be an ordinary browser or a headless browser.
+    Those options can be set in cmd when running pytest
+    Example:
+    pytest tests --headless True --browser 'Firefox'
+    pytest tests --headless False --browser 'Chrome'
+    """
     if request.config.getoption('--headless') == 'True':
         headless = True
     else:
@@ -27,7 +37,7 @@ def driver(request):
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--start-maximized")
         options.headless = headless
-        return webdriver.Chrome(executable_path=ChromeDriverManager.install(),
+        return webdriver.Chrome(executable_path=ChromeDriverManager().install(),
                                 options=options)
 
     def create_firefox_driver():
@@ -58,6 +68,8 @@ def driver(request):
 
 
 def pytest_generate_tests(metafunc):
+    """This method links testcase in folder tests
+    to the test data in folder resources and creates data fixture"""
     def parametrize(test_data):
         for key, value in test_data.items():
             param_keys = [k.strip() for k in key.split(',')]
