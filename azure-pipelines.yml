@@ -64,6 +64,7 @@ steps:
     git add --all docs/
     git commit -m "updated allure report"
     git push origin master
+  displayName: Sending test report to Github
   condition: always()
 
 - publish: $(System.DefaultWorkingDirectory)/docs
